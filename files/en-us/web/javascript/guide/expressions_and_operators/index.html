@@ -41,20 +41,17 @@ tags:
   ternary operator, the conditional operator. A binary operator requires two operands, one
   before the operator and one after the operator:</p>
 
-<pre class="brush: js"><em>operand1</em> <em>operator</em> <em>operand2</em>
-</pre>
+<pre class="brush: js">operand1 operator operand2</pre>
 
 <p>For example, <code>3+4</code> or <code>x*y</code>.</p>
 
 <p>A unary operator requires a single operand, either before or after the operator:</p>
 
-<pre class="brush: js"><em>operator</em> <em>operand</em>
-</pre>
+<pre class="brush: js">operator operand</pre>
 
 <p>or</p>
 
-<pre class="brush: js"><em>operand</em> <em>operator</em>
-</pre>
+<pre class="brush: js">operand operator</pre>
 
 <p>For example, <code>x++</code> or <code>++x</code>.</p>
 
@@ -198,7 +195,8 @@ tags:
 <p>Like most expressions, assignments like <code>x = y</code> have a return value. It can
   be retrieved by e.g. assigning the expression or logging it:</p>
 
-<pre>const z = (x = y); // Or equivalently: const z = x = y;
+<pre class="brush: js">
+const z = (x = y); // Or equivalently: const z = x = y;
 
 console.log(z); // Log the return value of the assignment x = y.
 console.log(x = y); // Or log the return value directly.
@@ -274,7 +272,7 @@ var var2 = 4;
   <tbody>
     <tr>
       <td><a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#equality">Equal</a>
+          href="/en-US/docs/Web/JavaScript/Reference/Operators/Equality">Equal</a>
         (<code>==</code>)</td>
       <td>Returns <code>true</code> if the operands are equal.</td>
       <td><code>3 == var1</code>
@@ -283,7 +281,7 @@ var var2 = 4;
       </td>
     </tr>
     <tr>
-      <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators#inequality">
+      <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Inequality">
           Not equal</a> (<code>!=</code>)
       </td>
       <td>Returns <code>true</code> if the operands are not equal.</td>
@@ -292,7 +290,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td><a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#identity">Strict
+          href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality">Strict
           equal</a> (<code>===</code>)</td>
       <td>Returns <code>true</code> if the operands are equal and of the same type. See
         also {{jsxref("Object.is")}} and <a
@@ -302,7 +300,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td><a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#nonidentity">Strict
+          href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality">Strict
           not equal</a> (<code>!==</code>)</td>
       <td>Returns <code>true</code> if the operands are of the same type but not equal, or
         are of different type.</td>
@@ -311,7 +309,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td><a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#greater_than_operator">Greater
+          href="/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than">Greater
           than</a> (<code>&gt;</code>)</td>
       <td>Returns <code>true</code> if the left operand is greater than the right operand.
       </td>
@@ -320,7 +318,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td><a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#greater_than_or_equal_operator">Greater
+          href="/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal">Greater
           than or equal</a> (<code>&gt;=</code>)</td>
       <td>Returns <code>true</code> if the left operand is greater than or equal to the
         right operand.</td>
@@ -329,7 +327,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td><a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#less_than_operator">Less
+          href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than">Less
           than</a> (<code>&lt;</code>)</td>
       <td>Returns <code>true</code> if the left operand is less than the right operand.
       </td>
@@ -338,7 +336,7 @@ var var2 = 4;
     </tr>
     <tr>
       <td><a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators#less_than_or_equal_operator">Less
+          href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal">Less
           than or equal</a> (<code>&lt;=</code>)</td>
       <td>Returns <code>true</code> if the left operand is less than or equal to the right
         operand.</td>
@@ -371,7 +369,7 @@ var var2 = 4;
   <code>*</code>, <code>/</code>), JavaScript provides the arithmetic operators listed in
   the following table:</p>
 
-<table class="fullwidth-table">
+<table class="standard-table">
   <caption>Arithmetic operators</caption>
   <thead>
     <tr>
@@ -590,7 +588,7 @@ After:               1010 0000 0000 0000 0110 0000 0000 0001</pre>
 
 <p>The shift operators are listed in the following table.</p>
 
-<table class="fullwidth-table">
+<table class="standard-table">
   <caption>Bitwise shift operators</caption>
   <thead>
     <tr>
@@ -602,7 +600,7 @@ After:               1010 0000 0000 0000 0110 0000 0000 0001</pre>
   <tbody>
     <tr>
       <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift">Left
-          shift</a><br>
+          shift</a>
         (<code>&lt;&lt;</code>)</td>
       <td>This operator shifts the first operand the specified number of bits to the left.
         Excess bits shifted off to the left are discarded. Zero bits are shifted in from
@@ -643,7 +641,7 @@ After:               1010 0000 0000 0000 0110 0000 0000 0001</pre>
   operators are used with non-Boolean values, they may return a non-Boolean value. The
   logical operators are described in the following table.</p>
 
-<table class="fullwidth-table">
+<table class="standard-table">
   <caption>Logical operators</caption>
   <thead>
     <tr>
@@ -682,7 +680,8 @@ After:               1010 0000 0000 0000 0110 0000 0000 0001</pre>
 </table>
 
 <p>Examples of expressions that can be converted to <code>false</code> are those that
-  evaluate to null, 0, NaN, the empty string (""), or undefined.</p>
+  evaluate to {{jsxref("null")}}, <code>0</code>, {{jsxref("NaN")}}, the empty string
+  (<code>""</code>), or {{jsxref("undefined")}}.</p>
 
 <p>The following code shows examples of the <code>&amp;&amp;</code> (logical AND)
   operator.</p>
@@ -696,7 +695,7 @@ var a6 = false &amp;&amp; 'Cat';    // f &amp;&amp; t returns false
 var a7 = 'Cat' &amp;&amp; false;    // t &amp;&amp; f returns false
 </pre>
 
-<p>The following code shows examples of the || (logical OR) operator.</p>
+<p>The following code shows examples of the <code>||</code> (logical OR) operator.</p>
 
 <pre class="brush: js">var o1 =  true || true;     // t || t returns true
 var o2 = false || true;     // f || t returns true
@@ -707,7 +706,7 @@ var o6 = false || 'Cat';    // f || t returns Cat
 var o7 = 'Cat' || false;    // t || f returns Cat
 </pre>
 
-<p>The following code shows examples of the ! (logical NOT) operator.</p>
+<p>The following code shows examples of the <code>!</code> (logical NOT) operator.</p>
 
 <pre class="brush: js">var n1 = !true;  // !t returns false
 var n2 = !false; // !f returns true
@@ -732,12 +731,8 @@ var n3 = !'Cat'; // !t returns false
 <p>Note that for the second case, in modern code you can use the new <a
     href="/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">Nullish
     coalescing operator</a> (<code>??</code>) that works like <code>||</code>, but it only
-  returns the second expression, when the first one is "<a
-    href="/en-US/docs/Glossary/Nullish">nullish</a>", i.e. <a
-    href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"
-    title="The value null represents the intentional absence of any object value. It is one of JavaScript's primitive values and is treated as falsy for boolean operations."><code>null</code></a>
-  or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"
-    title="The global undefined property represents the primitive value undefined. It is one of JavaScript's primitive types."><code>undefined</code></a>.
+    returns the second expression, when the first one is "<a
+    href="/en-US/docs/Glossary/Nullish">nullish</a>", i.e. {{jsxref("null")}} or {{jsxref("undefined")}}.
   It is thus the better alternative to provide defaults, when values like <code>''</code>
   or <code>0</code> are valid values for the first expression, too.</p>
 
@@ -766,8 +761,7 @@ mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring
     operator</a> is the only JavaScript operator that takes three operands. The operator
   can have one of two values based on a condition. The syntax is:</p>
 
-<pre class="brush: js"><em>condition</em> ? <em>val1</em> : <em>val2</em>
-</pre>
+<pre class="brush: js">condition ? val1 : val2</pre>
 
 <p>If <code>condition</code> is true, the operator has the value of <code>val1</code>.
   Otherwise it has the value of <code>val2</code>. You can use the conditional operator
@@ -1030,7 +1024,7 @@ if (theDay instanceof Date) {
       <td><code>. []</code></td>
     </tr>
     <tr>
-      <td>call / create instance</td>
+      <td>call/create instance</td>
       <td><code>() new</code></td>
     </tr>
     <tr>
@@ -1152,12 +1146,12 @@ this.propertyName
 }
 </pre>
 
-<p>You could call <code>validate</code> in each form element's <code>onChange</code> event
+<p>You could call <code>validate</code> in each form element's {{domxref("GlobalEventHandlers/onchange", "onchange")}} event
   handler, using <code>this</code> to pass it to the form element, as in the following
   example:</p>
 
 <pre class="brush: html">&lt;p&gt;Enter a number between 18 and 99:&lt;/p&gt;
-&lt;input type="text" name="age" size=3 onChange="validate(this, 18, 99);"&gt;
+&lt;input type="text" name="age" size=3 onchange="validate(this, 18, 99);"&gt;
 </pre>
 
 <h4 id="Grouping_operator">Grouping operator</h4>
